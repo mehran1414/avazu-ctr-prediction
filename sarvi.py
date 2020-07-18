@@ -32,6 +32,13 @@ train = pd.read_csv("train1.csv")
 # plt.show()
 
 #Relation between attributes
-plt.figure(figsize=(14,12))
-foo = sns.heatmap(train.corr(), vmax=0.6,square=True, annot=True)
+# plt.figure(figsize=(14,12))
+# foo = sns.heatmap(train.corr(), vmax=0.6,square=True, annot=True)
+# plt.show()
+
+#Pairplot
+warnings.filterwarnings(action="ignore")
+cols = ['Unnamed: 0', 'click', 'hour', 'C14', 'C17']
+g = sns.pairplot(data = train, vars = cols, size =1.5, hue = 'click')
+g.set(xticklabels = [])
 plt.show()
