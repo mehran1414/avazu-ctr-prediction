@@ -52,7 +52,7 @@ foo = sns.heatmap(train.corr(), vmax=0.6,square=True, annot=True)
 plt.show()
 
 '''I found a new package! Although in its tutorial showed its performance on
-mixed categorical-numerical datasets, I just get the categorical becuase the 
+mixed categorical-numerical datasets, I just get the categorical becuase the
 the computation is so heavy!
 '''
 from dython.nominal import associations
@@ -84,7 +84,7 @@ plt.show()
 
 
 # =============================================================================
-# I will drop the object(string) object and get the dist plot for the remaining 
+# I will drop the object(string) object and get the dist plot for the remaining
 # variables.
 # =============================================================================
 train.info()
@@ -106,7 +106,7 @@ are somehow have limited levels.
 '''
 
 # =============================================================================
-# I am going to check for outliers : (just sample, feel free to change variables 
+# I am going to check for outliers : (just sample, feel free to change variables
 # in your fork!)
 # =============================================================================
 
@@ -124,7 +124,7 @@ plt.show()
 #Quantile
 '''
 The 0.25 and 0.75 quantile ommit enormous amount of data, so I used 0.01 and 0.99
-instead. 
+instead.
 '''
 train1_low = train.quantile(0.01)
 train1_high = train.quantile(0.99)
@@ -151,11 +151,3 @@ for i in train_out.columns[2:23].tolist():
     len_of_feature_count.append(len(train_out[i].astype(str).value_counts()))
 
 As you may see in this part of the code and previous parts, 
-
-
-
-
-
-
-
-
