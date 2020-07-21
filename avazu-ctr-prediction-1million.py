@@ -150,4 +150,3 @@ for i in train_out.columns[2:23].tolist():
     print(i, ':', len(train_out[i].astype(str).value_counts()))
     len_of_feature_count.append(len(train_out[i].astype(str).value_counts()))
 
-As you may see in this part of the code and previous parts, 
